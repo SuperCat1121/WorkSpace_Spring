@@ -10,5 +10,9 @@
 		</constructor-arg>
 		<constructor-arg value="15000" />
 	</bean>
+	<bean id="banana" class="com.test01.MessageBeanImpl">
+		<constructor-arg value="3500" index="1" />
+		<constructor-arg value="banana" index="0" />
+	</bean>
 
 </beans>

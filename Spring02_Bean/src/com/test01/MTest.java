@@ -12,6 +12,9 @@ public class MTest {
 		
 		MessageBean watermelon = (MessageBean) factory.getBean("watermelon");
 		watermelon.sayHello();
+		
+		MessageBean banana = (MessageBean) factory.getBean("banana");
+		banana.sayHello();
 	}
 
 }
