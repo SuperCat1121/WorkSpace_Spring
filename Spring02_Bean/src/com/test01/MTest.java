@@ -15,6 +15,8 @@ public class MTest {
 		
 		MessageBean banana = (MessageBean) factory.getBean("banana");
 		banana.sayHello();
+		
+		((ClassPathXmlApplicationContext)factory).close();
 	}
 
 }
