@@ -10,6 +10,9 @@
 		<config>src/com/test01/applicationBeans.xml</config>
 		<config>src/com/test02/applicationBeans.xml</config>
 		<config>src/com/test03/applicationBeans.xml</config>
+		<config>src/com/test04/applicationBeans.xml</config>
+		<config>src/com/test05/applicationBeans.xml</config>
+		<config>src/com/test06/applicationBeans.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
