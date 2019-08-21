@@ -17,7 +17,7 @@ public class MTest {
 		System.out.println(lee);
 		System.out.println(kim);
 		
-		// getBean(1, 2) : 2번째 파라미터는 돌려줄 클래스타입
+		// getBean(1, 2) : 2번째 파라미터는 받아올 클래스의 타입
 		JobAddress jHong = factory.getBean("jHong", JobAddress.class);
 		System.out.println(jHong);
 		
