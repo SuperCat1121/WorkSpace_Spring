@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<bean id="left" class="com.test02.BirthDto">
+		<constructor-arg value="홍준성"/>
+		<constructor-arg value="2월 27일"/>
+	</bean>
+	
+	<bean id="left2" class="com.test02.BirthDto">
+		<constructor-arg value="임성현"/>
+		<constructor-arg value="2월 14일"/>
+	</bean>
+	
+	<bean id="me" class="com.test02.BirthDto">
+		<constructor-arg value="이태식"/>
+		<constructor-arg value="10월 4일"/>
+	</bean>
+	
+</beans>
