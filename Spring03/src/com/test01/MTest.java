@@ -10,6 +10,9 @@ public class MTest {
 		
 		AbstractTest bean = beans.getBean("singleton", AbstractTest.class);
 		System.out.println("오늘은 " + bean.dayInfo() + " 입니다.");
+		
+		AbstractTest test = new Sunday();
+		System.out.println(test.dayInfo());
 	}
 	/*
 		싱글톤 레지스트리

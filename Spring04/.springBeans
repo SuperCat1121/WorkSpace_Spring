@@ -8,12 +8,7 @@
 	<enableImports><![CDATA[false]]></enableImports>
 	<configs>
 		<config>src/com/test01/applicationBeans.xml</config>
-		<config>src/com/test02/applicationBeans.xml</config>
-		<config>src/com/test03/applicationBeans.xml</config>
-		<config>src/com/test04/applicationBeans.xml</config>
-		<config>src/com/test05/applicationBeans.xml</config>
-		<config>src/com/test06/applicationBeans.xml</config>
-		<config>src/com/test08/applicationBeans.xml</config>
+		<config>src/com/test02/applicationContext.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
