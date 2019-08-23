@@ -7,6 +7,7 @@
 
 	<!-- TODO : 001. annotation 읽어서 bean 생성 -->
 	<context:component-scan base-package="com.test04"/>
+	
 	<bean id="myUser01" class="com.test04.UserDto">
 		<constructor-arg value="홍길동"/>
 	</bean>
@@ -16,3 +17,36 @@
 	</bean>
 
 </beans>
+
+<!--
+	1. <context:annotation-config/>
+	    @Autowire, @Required, @Resource, @PostConstructor, @PreDestroy 등의
+	    어노테이션을 처리해주는 bean post processor 이다.
+	
+	2. <context:component-scan base-package="???"/>
+	    ??? 안에 있는 어노테이션들을 처리함.
+	    (@Component, @Controller, @Service, @Repository, ...)
+	    -> annotation-config를 확장
+	    
+	3. <mvc:annotation-driven/>
+	    HandlerMapping 클래스와 HandlerAdapter 클래스를 사용하여
+	    요청된 uri를 mapping 및 유효성 검사를 도와줌.
+	    (@RequestMapping, @Valid, ...)
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
