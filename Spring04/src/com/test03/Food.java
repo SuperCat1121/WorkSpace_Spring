@@ -10,7 +10,6 @@ public class Food {
 	}
 
 	public Food(String name, int price) {
-		super();
 		this.name = name;
 		this.price = price;
 	}
@@ -33,7 +32,7 @@ public class Food {
 
 	@Override
 	public String toString() {
-		return  name + ", " + price;
+		return  name + "\t 가격 : " + price + "\n";
 	}
 
 }
