@@ -41,11 +41,11 @@
 	    <artifactId>aspectjweaver</artifactId>
 	    <version>1.9.4</version>
 	</dependency>
-	<!-- https://mvnrepository.com/artifact/aspectj/aspectjrt -->
+	<!-- https://mvnrepository.com/artifact/org.aspectj/aspectjrt -->
 	<dependency>
-	    <groupId>aspectj</groupId>
+	    <groupId>org.aspectj</groupId>
 	    <artifactId>aspectjrt</artifactId>
-	    <version>1.5.4</version>
+	    <version>1.9.4</version>
 	</dependency>
   </dependencies>
 </project>
