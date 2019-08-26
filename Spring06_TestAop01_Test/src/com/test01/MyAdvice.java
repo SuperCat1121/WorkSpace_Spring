@@ -21,7 +21,7 @@ public class MyAdvice {
 		System.out.println("이름이 멋지시네요");
 	}
 	
-	@AfterReturning("execution(public * com.test01.Person.sayJob(..))")
+	@AfterReturning("execution(public * com.test01.Person.sayJob(..))") // pointcut 임
 	public void afterReturnSaying(JoinPoint join) {
 		System.out.println("직업이 무엇입니까?");
 	}
