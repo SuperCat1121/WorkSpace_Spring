@@ -13,4 +13,4 @@ public class MTest {
 	}
 }
 
-// joinpoint pointcut
+// joinpoint, aspect or advisor(advice + pointcut)
