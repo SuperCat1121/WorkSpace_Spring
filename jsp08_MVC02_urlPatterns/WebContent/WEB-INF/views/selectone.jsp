@@ -25,9 +25,9 @@
 		</tr>
 		<tr>
 			<td colspan="2">
-				<input type="button" value="수정" onclick="location.href='updateform?seq=${dto.seq}'">
-				<input type="button" value="삭제" onclick="location.href='delete?seq=${dto.seq}'">
-				<input type="button" value="목록" onclick="location.href='selectall'">
+				<input type="button" value="수정" onclick="location.href='updateform.do?seq=${dto.seq}'">
+				<input type="button" value="삭제" onclick="location.href='remove.do?seq=${dto.seq}'">
+				<input type="button" value="목록" onclick="location.href='boardlist.do'">
 			</td>
 		</tr>
 	</table>

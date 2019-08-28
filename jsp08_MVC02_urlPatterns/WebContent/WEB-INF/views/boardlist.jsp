@@ -33,7 +33,7 @@
 					<tr>
 						<td>${dto.seq}</td>
 						<td>${dto.writer}</td>
-						<td><a href="selectone?seq=${dto.seq}">${dto.title}</a></td>
+						<td><a href="selectone.do?seq=${dto.seq}">${dto.title}</a></td>
 						<td>${dto.regdate}</td>
 					</tr>
 				</c:forEach>
@@ -41,7 +41,7 @@
 		</c:choose>
 		<tr>
 			<td colspan="4">
-				<input type="button" value="글 작성" onclick="location.href='insertform'">
+				<input type="button" value="글 작성" onclick="location.href='insertform.do'">
 			</td>
 		</tr>
 	</table>

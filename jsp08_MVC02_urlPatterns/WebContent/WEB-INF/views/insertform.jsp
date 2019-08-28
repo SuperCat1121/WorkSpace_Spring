@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <% request.setCharacterEncoding("UTF-8"); %>
 <% response.setContentType("text/html; charset=UTF-8"); %>
 <!DOCTYPE html>
@@ -10,25 +9,24 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form method="post" action="update">
-		<input type="hidden" name="seq" value="${dto.seq}">
+	<form method="post" action="insertres.do">
 		<table border="1">
 			<tr>
 				<th>작성자</th>
-				<td>${dto.writer}</td>
+				<td><input type="text" name="writer"></td>
 			</tr>
 			<tr>
 				<th>제  목</th>
-				<td><input type="text" name="title" value="${dto.title}"></td>
+				<td><input type="text" name="title"></td>
 			</tr>
 			<tr>
 				<th>내  용</th>
-				<td><input type="text" name="content" value="${dto.content}"></td>
+				<td><input type="text" name="content"></td>
 			</tr>
 			<tr>
-				<td>
-					<input type="submit" value="수정하기">
-					<input type="button" value="취소" onclick="selectone?seq=${dto.seq}'">
+				<td colspan="2">
+					<input type="submit" value="글 쓰기">
+					<input type="button" value="취소" onclick="location.href='boardlist.do'">
 				</td>
 			</tr>
 		</table>

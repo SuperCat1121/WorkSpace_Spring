@@ -9,11 +9,13 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<a href="mvc.do?command=selectlist">글 목록 가기</a>
+	<a href="boardlist.do">글 목록 가기</a>
 	<br>
+	<!--
 	<a href="selectall">목록</a><br>
 	<a href="/selectall">목록2</a><br>
 	<a href="./selectall">목록3</a><br>
-	<a href="<%= request.getContextPath() %>/selectall">목록4</a><br>
+	<a href="<% //request.getContextPath() %>/selectall">목록4</a><br>
+	-->
 </body>
 </html>
