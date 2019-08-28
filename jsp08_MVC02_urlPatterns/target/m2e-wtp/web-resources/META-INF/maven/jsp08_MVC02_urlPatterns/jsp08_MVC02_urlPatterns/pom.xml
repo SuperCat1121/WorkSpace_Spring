@@ -32,6 +32,12 @@
       </plugin>
     </plugins>
   </build>
+  <repositories>
+  	<repository>
+  		<id>Boundless</id>
+  		<url>https://repo.boundlessgeo.com/main/</url>
+  	</repository>
+  </repositories>
   <!--
   		spring-core, spring-context, spring-web, spring-webmvc
   		spring-jdbc, jstl(tomcat), ojdbc6
@@ -79,5 +85,12 @@
 	      	<artifactId>taglibs-standard-impl</artifactId>
 	      	<version>1.2.5</version>
 	    </dependency>
+		<!-- https://mvnrepository.com/artifact/com.oracle.jdbc/ojdbc6 -->
+		<dependency>
+		    <groupId>com.oracle.jdbc</groupId>
+		    <artifactId>ojdbc6</artifactId>
+		    <version>11.1.0.6.0</version>
+		    <scope>runtime</scope>
+		</dependency>
   </dependencies>
 </project>
