@@ -1,0 +1,11 @@
+﻿jsp의 java(scriptlet) 을 el(expression language)로.
+
+servlet에서 특정 page로 forwarding 하는 코드.
+
+file upload 가능하게 하는 form tag 속성 : enctype="multipart/form-data"
+
+file download에 사용되는 출력 stream : ServletOutputStream
+
+servlet life cycle
+
+directive tag ? (지시자)
