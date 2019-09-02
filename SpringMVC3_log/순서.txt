@@ -14,6 +14,6 @@
 12. web.xml에 aop-context 등록
 13. src/main/resources/log4j.xml 출력하고자 하는 패키지 등록(package 추가, root logger를 trace로 바꿈)
 --------------------------------------------------(filter)
-14. pom.xml - commons.lang3
+14. pom.xml - commons.lang3 (String Util 사용)
 15. com.hello.mvc03.common.filter/LogFilter.java (javax.servlet.Filter (상속))
 16. web.xml 필터 적용
