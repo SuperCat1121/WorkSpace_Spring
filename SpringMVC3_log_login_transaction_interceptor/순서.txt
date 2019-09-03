@@ -1,0 +1,46 @@
+
+1. pom.xml - ojdbc6.jar, mybatis, mybatis-spring, commons-dbcp, spring-orm
+2. web.xml - servlet-mapping : url-pattern, encodingFilter 설정
+3. WEB-INF/spring/sqls/test.sql 만들기
+4. dto, dao, biz 만들기
+5. src/main/resources/sqls/mapper.xml 만들기
+6. WEB-INF/spring/sqls/config.xml 만들기
+7. src/main/resources/properties/db.properties 만들기
+8. applicationContext.xml 설정 잡기
+--------------------------------------------------(AOP)
+9. pom.xml - org.aspectj : aspectjweaver, aspectjrt(runtime)
+10. com.hello.mvc03.common.aop/LogAop.java 만들기
+11. aop-context.xml 만들기
+12. web.xml에 aop-context 등록
+13. src/main/resources/log4j.xml 출력하고자 하는 패키지 등록(package 추가, root logger를 trace로 바꿈)
+--------------------------------------------------(filter)
+14. pom.xml - commons.lang3 (String Util 사용)
+15. com.hello.mvc03.common.filter/LogFilter.java (javax.servlet.Filter (상속))
+16. web.xml 필터 적용
+--------------------------------------------------(login)
+17. pom.xml - org.codehaus.jackson : jackson-core-asl, jackson-mapper-asl
+            - (spring 4.x 이상) com.fasterxml.jackson : jackson-databind, jackson-core
+18. (index.jsp -> controller) login.jsp
+19. (ajax -> controller[@ResponseBody], biz, dao, mapper.xml)
+--------------------------------------------------(transaction)
+20. dao, biz, controller (biz 메소드에 @Transactional 어노테이션 달아놓기)
+21. applicationContext (DataSourceTransactionManager 라는 이름의 bean 등록)
+22. servlet-context.xml (<tx:annotation-driven>)
+--------------------------------------------------(interceptor)
+23. com.hello.mvc03.common.interceptor / LoginInterceptor 클래스 만들기 (HandlerInterceptor impl)
+24. servlet-context.xml 에 interceptors 써놓기
+
+
+
+
+
+
+
+요청함 - 리스너 - xml들 읽음 - dispatchservlet - controller - biz - dao - db - dispatchservlet 으로 역행
+- ViewResolver가 뷰 응답
+
+
+
+
+
+
