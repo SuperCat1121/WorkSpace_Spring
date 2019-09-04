@@ -61,7 +61,11 @@ public class HomeController {
 		try {
 			inputStream = file.getInputStream();
 			String path = WebUtils.getRealPath(request.getSession().getServletContext(), "/storage");
-		
+			// getRealPath : 서블릿 컨테이너에서 제공 한대로
+			//               웹 애플리케이션 내에서 지정된 경로의 실제 경로를 리턴 (절대경로)
+			// 절대경로 : c:\..\.. 같은 것
+			// 상대경로 : 현재 내 폴더 위치 기준으로 찾음 (/ : root , ./ : 현재, ../ : 상위)
+			
 			System.out.println("업로드 될 실제 경로 : " + path);
 			
 			File storage = new File(path);
@@ -79,8 +83,9 @@ public class HomeController {
 			
 			int read = 0;
 			byte[] b = new byte[(int)file.getSize()];
-			
+			int i =0;
 			while((read=inputStream.read(b)) != -1) {
+				System.out.println(read + "byte 실행");
 				outputStream.write(b, 0, read);
 			}
 			
@@ -103,16 +108,21 @@ public class HomeController {
 	@RequestMapping("/download")
 	@ResponseBody
 	public byte[] fileDown(HttpServletRequest request, HttpServletResponse response, String filename) throws IOException {
-		
 		String path = WebUtils.getRealPath(request.getSession().getServletContext(), "/storage");
 		File file = new File(path + "/" + filename);
 	
 		byte[] bytes = FileCopyUtils.copyToByteArray(file);
 		String fn = new String(file.getName().getBytes(), "8859_1");
 		
+		/*
+			Content-disposition : attachment 는 브라우저 인식 파일확장자를 포함하여
+			모든 확장자의 파일들에 대해,  다운로드시 무조건 "파일 다운로드" 대화상자가
+			뜨도록 하는 헤더속성이라 할 수 있다
+		*/
 		response.setHeader("Content-Disposition", "attachment;filename=\"" + fn + "\"");
 		response.setContentLength(bytes.length);
 		response.setContentType("image/jpeg");
+		// tomcat web.xml 확인(mime-type)
 		
 		return bytes;
 	}

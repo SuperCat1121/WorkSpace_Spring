@@ -10,7 +10,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-
+	<!--
+		form:  -> form과 별 차이는 없다
+		form:errors = Errors, BindingResult를 사용할 때
+		              command 객체의 특정 filed에서 발생하는 에러 메시지 출력
+	-->
 	<form:form method="post" enctype="multipart/form-data" modelAttribute="uploadFile" action="upload">
 		<h3>업로드 할 파일 선택</h3>
 		파일 : <input type="file" name="file"/><br/>
@@ -24,3 +28,25 @@
 
 </body>
 </html>
+
+<!-- 
+	form tag의 enctype 속성
+	1. application/www-form-urlencoded : (default) 모든 문자들을 encoding 해준다
+	2. multipart/form-data : file upload 를 가능하게 해준다 (post)
+	3. text/plain : encoding 하지 않음
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
